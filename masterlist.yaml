@@ -6030,7 +6030,13 @@ plugins:
       - Scripts
 
   - name: 'New Vegas Redesigned 3.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/56312/'
+        name: 'Fallout New Vegas Redesigned 3 - Open Source'
+      - link: 'https://www.nexusmods.com/newvegas/mods/65865/'
+        name: 'Qwinn''s Refined FNV Redesigned 3'
+      - link: 'https://www.nexusmods.com/newvegas/mods/72951/'
+        name: 'NVR3R - New Vegas Redesigned 3 Revised'
     after: [ 'Project Beauty.esm' ]
     inc:
       - 'New Vegas Redesigned.esm'
@@ -6043,54 +6049,40 @@ plugins:
       - Delev
       - Graphics
       - Invent
-      - NpcFaces
-      - NPC.Race
       - Relev
-    dirty:
-      # v4.4
-      - <<: *quickClean
-        crc: 0xF789959A
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 94
-        udr: 73
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+    clean:
+      - crc: 0xDB577951
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x8DEBD601
+        util: 'FNVEdit v4.1.5d'
+  ### NVR3 - Legacy Files ###
   - name: 'New Vegas Redesigned 3.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
-    inc:
-      - 'New Vegas Redesigned.esm'
-      - 'New Vegas Redesigned II.esm'
-      - 'TTW Redesigned.esm'
+    msg: [ *obsolete ]
+  - name: 'Bitter Springs Redesigned.esp'
+    clean:
+      - crc: 0x2DC687C4
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Gomorrah Redesigned v2.esp'
+    clean:
+      - crc: 0x37768291
+        util: 'FNVEdit v4.1.5d'
+  ### NVR3 - Patches ###
+  # Adam Reborn
+  - name: 'NVR3_ADAMTrooperGloves Patch.esp'
+    tag: [ Graphics ]
+  # Spice of Life
+  - name: 'NVR3_1nivVSLArmors Patch.esp'
     tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
       - Delev
-      - Graphics
-      - Invent
-      - NpcFaces
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
       - NPC.Race
       - Relev
-    dirty:
-      # v4.4
-      - <<: *quickClean
-        crc: 0xA49C36C8
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1001
-        udr: 74
-  - name: 'Gomorrah Redesigned v2.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x54E5F3EE
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        udr: 3
-  - name: 'Bitter Springs Redesigned.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x0F5F3084
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 36
-        udr: 5
 
   - name: 'Wasteland Gals.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
