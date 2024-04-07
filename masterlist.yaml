@@ -1657,194 +1657,6 @@ plugins:
       - Invent.Remove
       - Stats
 
-###### Encounters - Allies ######
-  - name: 'ARESproject.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/48621/' ]
-    dirty:
-      - <<: *reqManualFix
-        crc: 0xBC0620B7
-        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
-        nav: 5
-      - <<: *reqManualFix
-        crc: 0xCA9BD0AA
-        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
-        nav: 5
-
-  - name: 'BittercupRedux.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/80781/'
-        name: 'Bittercup Companion - Redux'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackagesForceAdd
-      - Actors.Factions
-      - Actors.Stats
-      - Invent.Add
-      - Invent.Remove
-      - NPC.Class
-      - Scripts
-    clean:
-    # 1.4.2
-      - crc: 0x96986F62
-        util: 'FNVEdit v4.0.4c'
-
-  - name: 'Lily(Fawkes|Armored)\.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Fawkes Is Back ESP' ]
-        condition: 'many("Lily(Fawkes|Armored)\.esp")'
-  - name: 'LilyFawkes.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0xBDA8E6FF
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
-  - name: 'LilyArmored.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x7B9A5AB6
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
-
-  - name: 'LW Companion.*\.es[mp]'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/37649/'
-        name: 'Fallout 3 Save Import Utility and Lone Wanderer Companion'
-  - name: 'LW Companion.esm'
-    clean:
-      - crc: 0x758572C9
-        util: 'FNVEdit v4.0.4c'
-
-  - name: 'RobCo Certified( Friendly Hit Fixer)?\.es[mp]'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/43331/'
-        name: 'RobCo Certified - New Vegas'
-  - name: 'RobCo Certified.esm'
-    msg:
-      - *requiresNVSE
-      - <<: *wildEdits
-        subs: [ 'Delete **00094684** & **00137622** in **RobCo Certified.esm**.' ]
-        condition: 'checksum("RobCo Certified.esm", 3B386B25) or checksum("RobCo Certified.esm", 5417FDBA)'
-    dirty:
-      - <<: *quickClean
-        crc: 0x3B386B25
-        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 9
-      - <<: *quickClean
-        crc: 0x81401EEC
-        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 9
-  - name: 'RobCo Certified Friendly Hit Fixer.esp'
-    msg:
-      - <<: *useBashTweakInstead
-        subs:
-          - |
-
-            - Tweak Settings -> Combat: Max Ally Hits In Combat [Unlimited] &
-            - Tweak Settings -> Combat: Max Ally Hits Out Of Combat [Unlimited]
-  - name: 'Companion Core.esm'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/43331/'
-        name: 'RobCo Certified - New Vegas'
-    msg: [ *requiresNVSE ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xCF5E979C
-        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
-
-  - name: 'VanessaFollowerNV.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56270/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x0AD51D00
-        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 80
-
-###### Encounters - Enemies ######
-  - name: 'Momod.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/41361/' ]
-    tag:
-      - Deflst
-      - Delev
-      - Relations.Add
-      - Relev
-    dirty:
-      - <<: *quickClean
-        crc: 0x1EBEBDFF
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
-
-  - name: 'WARZONES - Misanthropy Pure.esm'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/40980/'
-        name: 'WARZONES - now with ADJUSTABLE SPAWNS'
-    tag:
-      - C.Regions
-      - Text
-    dirty:
-      - <<: *reqManualFix
-        crc: 0xE34DE281
-        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
-        nav: 84
-
-###### Encounters - Neutrals ######
-  - name: '(Creature)_Mojave_Straycats.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/70220/'
-        name: 'Mojave Straycats'
-    clean:
-      - crc: 0x71BA701E
-        util: 'FNVEdit v4.0.4c'
-
-  - name: 'outsidebets.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/46648/'
-        name: 'New Vegas Uncut - Outside Bets'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.RecordFlags
-      - Actors.Voice
-      - Factions
-      - Invent.Add
-      - Scripts
-    clean:
-      - crc: 0xE2ADCB31
-        util: 'FNVEdit v4.0.4'
-
-  - name: 'populatedcasino(-light|-medium)?\.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35369/' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Populated Casinos ESP' ]
-        condition: 'many("populatedcasino(-light|-medium)?\.esp")'
-    tag: [ Actors.AIPackages ]
-  - name: 'populatedcasino.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x9EAE96FF
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 48
-        udr: 2
-  - name: 'populatedcasino-medium.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x39574E5A
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 47
-        udr: 8
-  - name: 'populatedcasino-light.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0xFAB23559
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 46
-        udr: 16
-
 ###### Environment, Landscape & Flora ######
   - name: '(Uncut (Wasteland|Bison|Cottonwood|Extra|Greenhouses|Road|Skeletons).*|Northern Passage Cave Entrance).es[mp]'
     url:
@@ -1986,6 +1798,22 @@ plugins:
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
 
+  - name: 'outsidebets.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/46648/'
+        name: 'New Vegas Uncut - Outside Bets'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.RecordFlags
+      - Actors.Voice
+      - Factions
+      - Invent.Add
+      - Scripts
+    clean:
+      - crc: 0xE2ADCB31
+        util: 'FNVEdit v4.0.4'
+
   - name: 'Ricks HardCore Fixer & Optimizer.esp'
     url:
     - link: 'https://www.nexusmods.com/newvegas/mods/72432/'
@@ -2019,6 +1847,34 @@ plugins:
       - <<: *alreadyInX
         subs: [ '**KFE - Refill Water Bottles.esp**' ]
         condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
+
+  - name: 'RobCo Certified( Friendly Hit Fixer)?\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/43331/'
+        name: 'RobCo Certified - New Vegas'
+  - name: 'RobCo Certified.esm'
+    msg:
+      - *requiresNVSE
+      - <<: *wildEdits
+        subs: [ 'Delete **00094684** & **00137622** in **RobCo Certified.esm**.' ]
+        condition: 'checksum("RobCo Certified.esm", 3B386B25) or checksum("RobCo Certified.esm", 5417FDBA)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3B386B25
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 9
+      - <<: *quickClean
+        crc: 0x81401EEC
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 9
+  - name: 'RobCo Certified Friendly Hit Fixer.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs:
+          - |
+
+            - Tweak Settings -> Combat: Max Ally Hits In Combat [Unlimited] &
+            - Tweak Settings -> Combat: Max Ally Hits Out Of Combat [Unlimited]
 
   - name: 'ROOGNV.esp'
     url:
@@ -2355,6 +2211,19 @@ plugins:
     msg: [ *requiresNVSE ]
 
 ###### Gameplay - Follower Managers ######
+  - name: 'Companion Core.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/42353/'
+        name: 'Companion Share and Recruit - New Vegas'
+      - link: 'https://www.nexusmods.com/newvegas/mods/43331/'
+        name: 'RobCo Certified - New Vegas'
+    msg: [ *requiresNVSE ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xCF5E979C
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
   - name: 'NVPhalanx.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/35155/'
@@ -3056,6 +2925,140 @@ plugins:
         crc: 0x47236A33
         util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 1
+
+###### New Characters - Allies ######
+  - name: 'ARESproject.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/48621/' ]
+    dirty:
+      - <<: *reqManualFix
+        crc: 0xBC0620B7
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 5
+      - <<: *reqManualFix
+        crc: 0xCA9BD0AA
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 5
+
+  - name: 'BittercupRedux.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/80781/'
+        name: 'Bittercup Companion - Redux'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackagesForceAdd
+      - Actors.Factions
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+      - Scripts
+    clean:
+    # 1.4.2
+      - crc: 0x96986F62
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'Lily(Fawkes|Armored)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Fawkes Is Back ESP' ]
+        condition: 'many("Lily(Fawkes|Armored)\.esp")'
+  - name: 'LilyFawkes.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xBDA8E6FF
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'LilyArmored.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7B9A5AB6
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'LW Companion.*\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/37649/'
+        name: 'Fallout 3 Save Import Utility and Lone Wanderer Companion'
+  - name: 'LW Companion.esm'
+    clean:
+      - crc: 0x758572C9
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'VanessaFollowerNV.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56270/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x0AD51D00
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 80
+
+###### New Characters - Enemies ######
+  - name: 'Momod.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/41361/' ]
+    tag:
+      - Deflst
+      - Delev
+      - Relations.Add
+      - Relev
+    dirty:
+      - <<: *quickClean
+        crc: 0x1EBEBDFF
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'WARZONES - Misanthropy Pure.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40980/'
+        name: 'WARZONES - now with ADJUSTABLE SPAWNS'
+    tag:
+      - C.Regions
+      - Text
+    dirty:
+      - <<: *reqManualFix
+        crc: 0xE34DE281
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+        nav: 84
+
+###### New Characters - Neutrals ######
+  - name: '(Creature)_Mojave_Straycats.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/70220/'
+        name: 'Mojave Straycats'
+    clean:
+      - crc: 0x71BA701E
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'populatedcasino(-light|-medium)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35369/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Populated Casinos ESP' ]
+        condition: 'many("populatedcasino(-light|-medium)?\.esp")'
+    tag: [ Actors.AIPackages ]
+  - name: 'populatedcasino.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9EAE96FF
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 48
+        udr: 2
+  - name: 'populatedcasino-medium.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x39574E5A
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 47
+        udr: 8
+  - name: 'populatedcasino-light.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFAB23559
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 46
+        udr: 16
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
