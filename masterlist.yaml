@@ -2516,6 +2516,18 @@ plugins:
       - *requiresMCM
       - *requiresNVSE
 
+  - name: 'Main And Pause Menus Overhaul.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/74365/'
+        name: 'MAPMO - Main and Pause Menus Overhaul'
+    req:
+      - *anhNVSE
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
+      - *UIO
+    msg: [ *requires_xNVSE ]
+
   - name: 'oHUD.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/44757/'
