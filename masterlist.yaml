@@ -1200,26 +1200,6 @@ plugins:
         subs: [ 'WMX-WRP patch' ]
         condition: 'file("WMX-ArenovalisTextures.esp")'
 
-###### AudioVisual - Interface ######
-  - name: 'BIS - .*\.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/38604/' ]
-  - name: 'BIS - (Brumbek''s Inventory Sorting|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal|Promo DLC (Classic|Mercenary|Tribal|Caravan) Pack)\.esp'
-    tag: [ Names ]
-  - name: 'BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp'
-    inc:
-      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp'
-      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'ELECTRO-CITY patch' ]
-        condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
-
-  - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
-    tag: [ Names ]
-  - name: '(Inventory )?Sorter - (Ammo Supplies|Books|Cards|Combined (- Aid Crafting|- T3T Icon Compatch|RUS_(1|2))|Consumables|Crafting Parts|Currency|Magazines|Moddable Unique Weps|Mods)\.esp'
-    msg: [ *obsolete ]
-
 ###### AudioVisual - Models & Textures ######
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
@@ -2633,6 +2613,19 @@ plugins:
       - *requiresMCM
       - *requiresNVSE
 
+  - name: 'BIS - .*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38604/' ]
+  - name: 'BIS - (Brumbek''s Inventory Sorting|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal|Promo DLC (Classic|Mercenary|Tribal|Caravan) Pack)\.esp'
+    tag: [ Names ]
+  - name: 'BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp'
+    inc:
+      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp'
+      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'ELECTRO-CITY patch' ]
+        condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
+
   - name: 'iHUD.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40340/'
@@ -2664,6 +2657,12 @@ plugins:
         condition: 'active("oHUD.esm")'
       - *requiresMCM
       - *requiresNVSE
+
+  - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
+    tag: [ Names ]
+  - name: '(Inventory )?Sorter - (Ammo Supplies|Books|Cards|Combined (- Aid Crafting|- T3T Icon Compatch|RUS_(1|2))|Consumables|Crafting Parts|Currency|Magazines|Moddable Unique Weps|Mods)\.esp'
+    msg: [ *obsolete ]
 
 ###### Items ######
   - name: 'epock.esp'
