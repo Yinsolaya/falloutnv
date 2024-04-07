@@ -1105,13 +1105,19 @@ plugins:
         subs: [ 'Yukichigai Unofficial Patch' ]
         condition: 'active("YUP - Base Game( \+ All DLC)?\.esm")'
 
+  - name: 'Strip Lights Region Fix.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73596/'
+        name: 'Strip Lights Region Fix'
   - name: 'Strip Lights Region Fix.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/73596/' ]
     group: *cellSettingsGroup
     tag: [ C.Regions ]
     clean:
-      - crc: 0xADA6FC4C
-        util: 'FNVEdit v4.0.4b'
+      - crc: 0x8CB8E9E3
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Strip Lights Region Fix - .*\.esp'
+    after: [ 'Strip Lights Region Fix.esp' ]
+    tag: [ C.Regions ]
 
   - name: 'zion_lod_water.esp'
     url:
