@@ -2622,12 +2622,46 @@ plugins:
         util: 'FNVEdit v4.0.4c'
 
 ###### Gameplay - User Interface ######
+  - name: 'aHUD.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40858/'
+        name: 'Adjustable HUD - aHUD'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**oHUD.esm**' ]
+        condition: 'active("oHUD.esm")'
+      - *requiresMCM
+      - *requiresNVSE
+
+  - name: 'iHUD.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40340/'
+        name: 'Immersive HUD - iHUD'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**oHUD.esm**' ]
+        condition: 'active("oHUD.esm")'
+      - *requiresMCM
+      - *requiresNVSE
+
   - name: 'oHUD.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/44757/'
         name: 'One HUD - oHUD'
     req: [ *UIO ]
     msg:
+      - *requiresMCM
+      - *requiresNVSE
+
+  - name: 'Primary Needs HUD.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38538/'
+        name: 'Primary Needs HUD - pHUD'
+    req: [ *UIO ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**oHUD.esm**' ]
+        condition: 'active("oHUD.esm")'
       - *requiresMCM
       - *requiresNVSE
 
@@ -3759,10 +3793,6 @@ plugins:
 
   - name: 'Clean-Deluxe FNV.esm'
     inc: [ 'Performance of the Gods.esp' ]
-  - name: 'aHUD.esm'
-    msg: [ *requiresNVSE ]
-  - name: 'iHUD.esm'
-    msg: [ *requiresNVSE ]
 
   - name: 'HonestHearts-CaliberX.esm'
     tag: [ Names ]
