@@ -1880,6 +1880,33 @@ plugins:
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
 
+  - name: 'JustAssortedMods.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66666/'
+        name: 'JAM - Just Assorted Mods'
+    req:
+      - *lStewieAlTweaks
+      - *JIPLN
+      - *johnnyGuitar
+      - *kNVSE_Animation
+      - *UIO
+    inc:
+      # ToDo: Built in mods. Replace with alreayInX.
+      - 'JustBulletTime.esp'
+      - 'JustDynamicCrosshair.esp'
+      - 'JustHitIndicator.esp'
+      - 'JustHitMarker.esp'
+      - 'JustHoldBreath.esp'
+      - 'JustLootMenu.esp'
+      - 'JustVanillaSprint.esp'
+      - 'JustVisualObjectives.esp'
+      - 'JustWeaponHweel.esp'
+    msg: [ *requires_xNVSE ]
+    tag: [ Text ]
+    clean:
+      - crc: 0x6EAC1F92
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'outsidebets.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/46648/'
