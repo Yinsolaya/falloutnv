@@ -1136,16 +1136,6 @@ plugins:
       - crc: 0xFFF00ED5
         util: 'FNVEdit v4.0.4c'
 
-  - name: 'The Mod Configuration Menu.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42507/' ]
-    msg:
-      - <<: *obsolete
-        subs: [ '[MCM BugFix 2](https://www.nexusmods.com/newvegas/mods/42507/)' ]
-        condition: 'checksum("The Mod Configuration Menu.esp", CCCC88E7)'
-    clean:
-      - crc: 0xACBFF898
-        util: 'FNVEdit v4.0.4'
-
 ###### Modding Tools - Generated Files ######
   - name: 'Bashed Patch.*\.esp'
     url:
@@ -1176,6 +1166,18 @@ plugins:
     tag: [ NoMerge ]
 
 ###### Resources & Frameworks ######
+  - name: 'The Mod Configuration Menu.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/42507/'
+        name: 'The Mod Configuration Menu'
+    msg:
+      - <<: *obsolete
+        subs: [ '[MCM BugFix 2](https://www.nexusmods.com/newvegas/mods/42507/)' ]
+        condition: 'checksum("The Mod Configuration Menu.esp", CCCC88E7)'
+    clean:
+      - crc: 0xACBFF898
+        util: 'FNVEdit v4.0.4'
+
   - name: 'Vanilla UI Plus.esp'
     url:
       - link: 'https://www.moddb.com/mods/vanilla-ui-plus/'
