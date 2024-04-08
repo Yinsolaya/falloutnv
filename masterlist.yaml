@@ -1681,7 +1681,7 @@ plugins:
     clean:
       - crc: 0x77D39D0F
         util: 'FNVEdit v4.1.5d'
-        
+
   - name: 'T4-plugin.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/66903/' ]
     tag:
