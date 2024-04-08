@@ -1692,6 +1692,13 @@ plugins:
       - crc: 0xD01056A7
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'T4-modest.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/69642/' ]
+    tag: [ Graphics ]
+    clean:
+      - crc: 0xDEBC1A3C
+        util: 'FNVEdit v4.1.5d'
+
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42195/' ]
