@@ -1175,6 +1175,19 @@ plugins:
     after: [ 'TES5Merged.esp' ]
     tag: [ NoMerge ]
 
+###### Resources & Frameworks ######
+  - name: 'Vanilla UI Plus.esp'
+    url:
+      - link: 'https://www.moddb.com/mods/vanilla-ui-plus/'
+        name: 'Vanilla UI Plus'
+    req:
+      - *lStewieAlTweaks
+      - *JIPLN
+      - *johnnyGuitar
+      - *UIO
+    inc: [ 'DarNifiedUINV.esp' ]
+    msg: [ *requires_xNVSE ]
+
 ###### AudioVisual ######
   - name: '357retex.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47714/' ]
