@@ -776,7 +776,7 @@ plugins:
       - <<: *alsoUseX
         subs: [ '[Yukichigai Unofficial Patch](https://www.nexusmods.com/newvegas/mods/51664/)' ]
         condition: 'not active("YUP - Base Game( \+ All DLC)?\.esm")'
-      - *requiresNVSE
+      - *requires_xNVSE
     tag:
       - EffectStats
       - Enchantments
@@ -1421,7 +1421,7 @@ plugins:
       - <<: *compatIssuesWithX
         subs: [ 'Fallout - The Frontier' ]
         condition: 'active("The Frontier.esm")'
-      - *requiresNVSE
+      - *requires_xNVSE
     tag:
       - C.Climate
       - C.ImageSpace
@@ -1846,6 +1846,7 @@ plugins:
           - 'Literally Who''s Patch Emporium'
           - '[TTW Reputations - SD_Capture](https://www.nexusmods.com/newvegas/mods/83169/)'
         condition: 'active("TTW_Reputation.esm") and active("SD_Capture TTW Additions.esp") and not active("TTW Reputations - SD_Capture.esp")'
+      - *requires_xNVSE
     dirty:
       - <<: *quickClean
         crc: 0xC6734AE1
@@ -1865,6 +1866,7 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
+    msg: [ *requires_xNVSE ]
     dirty:
       - <<: *quickClean
         crc: 0x5BDF8423
@@ -2001,6 +2003,7 @@ plugins:
     req:
       - *JIPLN
       - 'WeaponRepairKitRepaired.esp'
+    msg: [ *requires_xNVSE ]
     tag:
       - C.Encounter
       - Names
@@ -2469,7 +2472,7 @@ plugins:
       - 'Cannibal Reborn (No Rebalance).esp'
     msg:
       - *requiresMCM
-      - *requiresNVSE
+      - *requires_xNVSE
     clean:
       - crc: 0x0EEF05A3
         util: 'FNVEdit v4.0.4b'
@@ -2479,7 +2482,7 @@ plugins:
     req: [ *JIPLN ]
     inc: [ 'LFox Cannibal Perk Improvements.esp' ]
     msg:
-      - *requiresNVSE
+      - *requires_xNVSE
       - <<: *useOnlyOneX
         subs: [ 'Cannibal Reborn ESP' ]
         condition: 'many("Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp")'
@@ -2504,7 +2507,7 @@ plugins:
       - <<: *alreadyInX
         subs: [ '**A Crime Against Nature.esp**' ]
         condition: 'active("A Crime Against Nature.esp")'
-      - *requiresNVSE
+      - *requires_xNVSE
       - <<: *useOnlyOneX
         subs: [ 'Dark Craving ESP' ]
         condition: 'many("Dark Craving NV( Incurable Edition)?\.esp")'
@@ -2599,6 +2602,7 @@ plugins:
       - <<: *patchProvided
         subs: [ 'New Vegas Bounties I LE' ]
         condition: 'active("NewVegasBounties.esm") and not file("nvse/plugins/scripts/gr_S6SPerksNVB1Patch.txt")'
+      - *requires_xNVSE
     clean:
     # 16.16 NV
       - crc: 0xD0DD1B41
@@ -2651,7 +2655,7 @@ plugins:
       - 'Powered Power Armor.esp'
     msg:
       - *requiresMCM
-      - *requiresNVSE
+      - *requires_xNVSE
 
   - name: 'iHUD.esm'
     url:
@@ -2981,6 +2985,7 @@ plugins:
           - 'Literally Who''s Patch Emporium'
           - '[TTW Reputations - Big Town Extensions](https://www.nexusmods.com/newvegas/mods/83169/)'
         condition: 'active("TTW Reputations.esm") and not active("TTW Reputations - Big Town Extensions.esp")'
+      - *requires_xNVSE
       - <<: *wildEdits
         subs: [ 'Delete **0602D934** & **06058B9E** from **Big Town Extensions.esm**.' ]
         condition: 'checksum("Big Town Extensions.esm", A99EFA1E) or checksum("Big Town Extensions.esm", 39F84E9C)'
@@ -6194,6 +6199,7 @@ plugins:
   - name: 'Tutorial Killer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
     req: [ *johnnyGuitar ]
+    msg: [ *requires_xNVSE ]
     clean:
       - crc: 0x8324E796
         util: 'FNVEdit v4.0.4'
