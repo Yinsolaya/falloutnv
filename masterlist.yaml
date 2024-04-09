@@ -1880,6 +1880,15 @@ plugins:
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
 
+  - name: 'ImmersiveRecoil.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/61973/'
+        name: 'Immersive Recoil 2.0'
+    req: [ *JIPLN ]
+    msg:
+      - *requiresMCM
+      - *requires_xNVSE
+
   - name: 'JustAssortedMods.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66666/'
