@@ -2011,6 +2011,21 @@ plugins:
             - Tweak Settings -> Combat: Max Ally Hits In Combat [Unlimited] &
             - Tweak Settings -> Combat: Max Ally Hits Out Of Combat [Unlimited]
 
+  - name: 'ROOG.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75599/'
+        name: 'ROOG TTW'
+    req: [ *JIPLN ]
+    msg: [ *requires_xNVSE ]
+    tag:
+      - Actors.Stats
+      - C.Encounter
+      - Stats
+  - name: 'sawyerbattyROOG.esp'
+    tag:
+      - Actors.Stats
+      - Stats
+
   - name: 'ROOGNV.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/76452/'
