@@ -2632,6 +2632,18 @@ plugins:
         subs: [ 'ELECTRO-CITY patch' ]
         condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
 
+  - name: 'FOVSlider.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/55085/'
+        name: 'FOV Slider'
+    req: [ *JIPLN ]
+    inc:
+      - 'CombatTrainingEngine.esp'
+      - 'Powered Power Armor.esp'
+    msg:
+      - *requiresMCM
+      - *requiresNVSE
+
   - name: 'iHUD.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40340/'
