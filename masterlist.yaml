@@ -6666,14 +6666,22 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/57113/'
         name: 'IMPACT'
       - link: 'https://www.nexusmods.com/newvegas/mods/62050/'
-        name: 'IMPACT: Compatibility Edition (JIP LN) (DLC - TTW - All Mods)'
+        name: 'IMPACT - Compatibility Edition'
+    req:
+      - <<: *JIPLN
+        condition: 'file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
     inc:
       - <<: *TTWv320
-        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+        condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     msg:
+      - <<: *requiresResources
+        subs: [ '[IMPACT](https://www.nexusmods.com/newvegas/mods/57113/)' ]
+        condition: 'not file("meshes/effects/impactballisticblood01.nif")'
+      - <<: *requires_xNVSE
+        condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
       - <<: *useInstead
-        subs: [ '[IMPACT: Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050)' ]
-        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+        subs: [ '[IMPACT - Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050/)' ]
+        condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
   - name: 'CAGE 1.9.3.2.esp'
     url:
