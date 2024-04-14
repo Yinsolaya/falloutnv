@@ -1324,6 +1324,14 @@ plugins:
         subs: [ '[aMidianBorn NV Book Of Water](https://www.nexusmods.com/newvegas/mods/39873/)' ]
         condition: 'not file("meshes\armor\advancedpowerarmor\adpowerarmor.nif")'
 
+  - name: 'DogToothsEnclaveOfficer.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
+    tag: [ Graphics ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
     dirty:
