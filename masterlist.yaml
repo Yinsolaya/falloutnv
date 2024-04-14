@@ -3795,106 +3795,30 @@ plugins:
       - <<: *compatNotes
         subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
 
-  - name: 'Fallout3.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    after: [ 'GunRunnersArsenal.esm' ]
-    # doNotClean
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.Skeleton
-      - Actors.Stats
-      - C.Acoustic
-      - C.Light
-      - C.Owner
-      - Delev
-      - Destructible
-      - Factions
-      - Invent
-      - Names
-      - NPC.Class
-      - NpcFaces
-      - Relations
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
-      - WeaponMods
-  - name: 'Anchorage.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    # doNotClean
-  - name: 'ThePitt.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    after: [ 'Anchorage.esm' ]
-    # doNotClean
-    tag:
-      - Actors.DeathItem
-      - Graphics
-      - Relations
-  - name: 'BrokenSteel.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    after:
-      - 'Anchorage.esm'
-      - 'ThePitt.esm'
-    # doNotClean
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.DeathItem
-      - C.Water
-      - Delev
-      - Destructible
-      - Factions
-      - Graphics
-      - Invent
-      - Relev
-      - Scripts
-      - Stats
-  - name: 'PointLookout.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    after:
-      - 'Anchorage.esm'
-      - 'ThePitt.esm'
-      - 'BrokenSteel.esm'
-    # doNotClean
-    tag:
-      - Graphics
-      - Names
-      - Stats
-  - name: 'Zeta.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    after:
-      - 'Anchorage.esm'
-      - 'ThePitt.esm'
-      - 'BrokenSteel.esm'
-      - 'PointLookout.esm'
-    # doNotClean
+  - name: '(TaleOfTwoWastelands|YUPTTW|Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
+    url:
+      - link: 'https://taleoftwowastelands.com/'
+        name: 'Tale of Two Wastelands'
+      - link: 'https://mod.pub/ttw/133-tale-of-two-wastelands/'
+        name: 'Tale of Two Wastelands (MOD:PUB)'
+      # Do Not Clean This Mods Files
   - name: 'TaleOfTwoWastelands.esm'
-    url: [ 'http://taleoftwowastelands.com/']
     group: *addonsGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *lStewieAlTweaks
+      - name: 'NVSE/Plugins/ttw_nvse.dll'
+        display: '[ROOGNVSE Plugin](https://www.nexusmods.com/newvegas/mods/77415/)'
     after:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
-    inc:
-      - name: 'Point Lookout Reborn.esm'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     msg:
-      # doNotClean
       - <<: *compatNotes
-        subs: [ 'https://taleoftwowastelands.com/viewtopic.php?f=50&t=6878/' ]
-      - <<: *requiresX
-        subs: [ '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277) v54.85+' ]
-        condition: 'file("NVSE/Plugins/jip_nvse.dll") and version("NVSE/Plugins/jip_nvse.dll", "54.85", <) and version("TaleOfTwoWastelands.esm", "3.2.2", ==)'
+        subs: [ 'https://mod.pub/ttw/133/docs/' ]
+      - *requires_xNVSE
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -3920,8 +3844,75 @@ plugins:
       - Sound
       - Stats
       - WeaponMods
+  ### TTW - FO3 Files ###
+  - name: '(Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
+    group: *dlcGroup
+  - name: 'Fallout3.esm'
+    after: [ 'GunRunnersArsenal.esm' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.Skeleton
+      - Actors.Stats
+      - C.Acoustic
+      - C.Light
+      - C.Owner
+      - Delev
+      - Destructible
+      - Factions
+      - Invent
+      - Names
+      - NPC.Class
+      - NpcFaces
+      - Relations
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
+  - name: 'BrokenSteel.esm'
+    after:
+      - 'Anchorage.esm'
+      - 'ThePitt.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.DeathItem
+      - C.Water
+      - Delev
+      - Destructible
+      - Factions
+      - Graphics
+      - Invent
+      - Relev
+      - Scripts
+      - Stats
+  - name: 'PointLookout.esm'
+    after:
+      - 'Anchorage.esm'
+      - 'BrokenSteel.esm'
+      - 'ThePitt.esm'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+  - name: 'ThePitt.esm'
+    after: [ 'Anchorage.esm' ]
+    tag:
+      - Actors.DeathItem
+      - Graphics
+      - Relations
+  - name: 'Zeta.esm'
+    after:
+      - 'Anchorage.esm'
+      - 'BrokenSteel.esm'
+      - 'PointLookout.esm'
+      - 'ThePitt.esm'
+  ### TTW - YUP ###
   - name: 'YUPTTW.esm'
-    url: [ 'http://taleoftwowastelands.com/' ]
+    group: *fixesGroup
     inc: [ 'YUP - Base Game + All DLC.esm' ]
     tag:
       - Actors.ACBS
@@ -3965,8 +3956,7 @@ plugins:
       - Sound
       - Stats
       - Text
-    group: *fixesGroup
-    # doNotClean
+
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
     group: *fixesGroup
