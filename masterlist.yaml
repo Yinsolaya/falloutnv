@@ -3572,6 +3572,20 @@ plugins:
         subs: [ '**The New Bison Steve Hotel.esm**' ]
         condition: 'not is_master("The New Bison Steve Hotel.esp")'
 
+###### New Characters ######
+  - name: 'TLD_Travelers.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/64623/'
+        name: 'The Living Desert - Travelers Patrols Consequences Increased Population and more'
+    req: [ *JIPLN ]
+    after: [ 'Functional Post Game Ending.esm' ]
+    msg: [ *requires_xNVSE ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA113E9C6
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 7
+
 ###### New Characters - Allies ######
   - name: 'ARESproject.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/48621/' ]
