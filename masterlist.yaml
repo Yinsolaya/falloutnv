@@ -2726,6 +2726,36 @@ plugins:
         util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 29
 
+###### Gameplay - NPC Behaviour & Dialogue ######
+  - name: 'Better Brotherhood.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75031/'
+        name: 'Better Brotherhood'
+    req:
+      - *JIPLN
+      - *ShowOff
+    tag:
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Sound
+      - Stats
+    msg: [ *requires_xNVSE ]
+    clean:
+      - crc: 0xB21276AD
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Better Brotherhood - TTW Patch.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'Better Brotherhood - YUP Patch.esp'
+    tag: [ Actors.Stats ]
+
 ###### Gameplay - Quests ######
   - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
     url:
