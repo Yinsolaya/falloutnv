@@ -1312,6 +1312,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/60666/'
         name: 'Book of Steel - Compatibility Edition'
+    after:
+      - 'Boacombat2glove'
+      - 'boa ncrpahelmet.esp'
     tag: [ Graphics ]
     msg:
       - <<: *deletePlugin
