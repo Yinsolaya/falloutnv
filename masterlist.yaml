@@ -1350,6 +1350,7 @@ plugins:
       - 'boa ncrpahelmet.esp'
       - 'Book of Steel.esp'
       - 'fixy crap ttw.esp'
+      - 'fixy crap ue.esp'
     tag: [ Graphics ]
     msg:
       - <<: *deletePlugin
