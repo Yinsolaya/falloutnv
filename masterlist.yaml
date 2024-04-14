@@ -3476,6 +3476,34 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 5
 
+  - name: 'MCMetalMK1(Armor|ArmorNonR|Helmet)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/80930/'
+        name: 'Classic Fallout Metal Armor'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Classic Fallout Metal Armor ESP' ]
+        condition: 'many("MCMetalMK1(Armor|ArmorNonR|Helmet)\.esp")'
+  - name: 'MCMetalMK1Armor.esp'
+    inc: [ 'NVSE/Plugins/Scripts/gr_MCMetalMK1.txt' ]
+    tag: [ Graphics ]
+    clean:
+      - crc: 0x60C4E7D6
+        util: 'FNVEdit v4.1.5d'
+  - name: 'MCMetalMK1ArmorNonR.esp'
+    inc: [ 'NVSE/Plugins/Scripts/gr_MCMetalMK1.txt' ]
+    clean:
+      - crc: 0x676D7D7D
+        util: 'FNVEdit v4.1.5d'
+  - name: 'MCMetalMK1Helmet.esp'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0x636CF197
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'Nightstalker Outfit.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66399/'
