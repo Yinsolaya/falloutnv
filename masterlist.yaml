@@ -2057,37 +2057,6 @@ plugins:
       - <<: *obsolete
         subs: [ '[Better Game Performance v5](https://www.nexusmods.com/newvegas/mods/51871/)' ]
 
-  - name: 'SD_Capture( TTW Additions)?\.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/82597/'
-        name: 'Subjugation - Slavery and Capture Mechanics'
-  - name: 'SD_Capture.esp'
-    req:
-      - *JIPLN
-      - *johnnyGuitar
-      - 'SD_Fatigue.esp'
-    msg:
-      - <<: *patchProvided
-        subs: [ 'Tale of Two Wastelands' ]
-        condition: 'active("TaleOfTwoWastelands.esm") and not active("SD_Capture TTW Additions.esp")'
-      - <<: *patch3rdParty
-        subs:
-          - 'Literally Who''s Patch Emporium'
-          - '[TTW Reputations - SD_Capture](https://www.nexusmods.com/newvegas/mods/83169/)'
-        condition: 'active("TTW_Reputation.esm") and active("SD_Capture TTW Additions.esp") and not active("TTW Reputations - SD_Capture.esp")'
-      - *requires_xNVSE
-    dirty:
-      - <<: *quickClean
-        crc: 0xC6734AE1
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 20
-  - name: 'SD_Capture TTW Additions.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x2CFC37E7
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 4
-
   - name: 'DLC Enhancements.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73803/'
@@ -2100,20 +2069,6 @@ plugins:
     clean:
       - crc: 0xE709B604
         util: 'FNVEdit v4.1.5d'
-
-  - name: 'SD_Fatigue.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/78111/'
-        name: 'Fatigue Overhaul - Non-Lethal and Pacifism Redone'
-    req:
-      - *JIPLN
-      - *johnnyGuitar
-    msg: [ *requires_xNVSE ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x5BDF8423
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 5
 
   - name: 'FlashlightNVSE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39968/' ]
@@ -2334,6 +2289,51 @@ plugins:
     clean:
       - crc: 0xDB8803A1
         util: 'FNVEdit v4.0.4'
+
+  - name: 'SD_Capture( TTW Additions)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/82597/'
+        name: 'Subjugation - Slavery and Capture Mechanics'
+  - name: 'SD_Capture.esp'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - 'SD_Fatigue.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Tale of Two Wastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm") and not active("SD_Capture TTW Additions.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Literally Who''s Patch Emporium'
+          - '[TTW Reputations - SD_Capture](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("TTW_Reputation.esm") and active("SD_Capture TTW Additions.esp") and not active("TTW Reputations - SD_Capture.esp")'
+      - *requires_xNVSE
+    dirty:
+      - <<: *quickClean
+        crc: 0xC6734AE1
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 20
+  - name: 'SD_Capture TTW Additions.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x2CFC37E7
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
+  - name: 'SD_Fatigue.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78111/'
+        name: 'Fatigue Overhaul - Non-Lethal and Pacifism Redone'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    msg: [ *requires_xNVSE ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x5BDF8423
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 5
 
   - name: 'Vanilla Enhancements.esm'
     url:
