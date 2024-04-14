@@ -2188,8 +2188,8 @@ plugins:
 
   - name: 'Ricks HardCore Fixer & Optimizer.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/72432/'
-      name: 'MCM Hardcore Needs Fixer And Optionizer Plus More'
+      - link: 'https://www.nexusmods.com/newvegas/mods/72432/'
+        name: 'MCM Hardcore Needs Fixer And Optionizer Plus More'
     inc:
       - 'jsawyer.esp'
       - 'Project Nevada - Rebalance.esp'
@@ -2281,11 +2281,11 @@ plugins:
 
   - name: 'sawyerbatty.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/75598/'
-      name: 'SawyerBatty TTW'
+      - link: 'https://www.nexusmods.com/newvegas/mods/75598/'
+        name: 'SawyerBatty TTW'
     inc:
-    - 'jsawyer.esp'
-    - 'Project Nevada - Rebalance.esp'
+      - 'jsawyer.esp'
+      - 'Project Nevada - Rebalance.esp'
     msg:
       - <<: *patch3rdParty
         subs:
@@ -6666,8 +6666,8 @@ plugins:
 
   - name: 'tmzLODadditions.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/61206/'
-      name: 'LOD additions and improvements'
+      - link: 'https://www.nexusmods.com/newvegas/mods/61206/'
+        name: 'LOD additions and improvements'
     group: *lodGroup
     msg:
       - <<: *patch3rdParty
@@ -6681,8 +6681,8 @@ plugins:
 
   - name: 'LOD Additions - TTW Patch.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/77945/'
-      name: 'Vish''s Patch Hub (FNV-TTW)'
+      - link: 'https://www.nexusmods.com/newvegas/mods/77945/'
+        name: 'Vish''s Patch Hub (FNV-TTW)'
     group: *lodGroup
     after:  [ 'tmzLODadditions.esp' ]
     clean:
@@ -6691,8 +6691,8 @@ plugins:
 
   - name: 'Wasted LOD rocks.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/79734/'
-      name: 'Wasted LOD - Cliffs of DC'
+      - link: 'https://www.nexusmods.com/newvegas/mods/79734/'
+        name: 'Wasted LOD - Cliffs of DC'
     group: *lodGroup
     req: [ *TTWv320 ]
     clean:
