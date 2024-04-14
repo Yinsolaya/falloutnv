@@ -2113,12 +2113,12 @@ plugins:
         name: 'JSawyer Ultimate Edition'
   - name: 'JSawyer Ultimate.esp'
     inc:
-    - 'DelayDLCReduxPOPP.esp'
-    - 'jsawyer.esp'
-    - 'JSawyer - CE.esp'
-    - 'Project Nevada - Rebalance.esp'
-    - 'sawyerbatty.esp'
-    - 'Vigor.esp'
+      - 'DelayDLCReduxPOPP.esp'
+      - 'jsawyer.esp'
+      - 'JSawyer - CE.esp'
+      - 'Project Nevada - Rebalance.esp'
+      - 'sawyerbatty.esp'
+      - 'Vigor.esp'
   - name: 'JSawyer Ultimate - GRA Merged.esp'
     inc: [ 'Mojave Arsenal.esp' ]
     msg:
@@ -2311,8 +2311,8 @@ plugins:
 
   - name: 'Vanilla Enhancements.esm'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/78877/'
-      name: 'Essential Vanilla Enhancements Merged'
+      - link: 'https://www.nexusmods.com/newvegas/mods/78877/'
+        name: 'Essential Vanilla Enhancements Merged'
     group: *earlyLoadersGroup
     tag:
       - Actors.ACBS
@@ -2333,16 +2333,16 @@ plugins:
 
   - name: 'Vigor( - (Armor Integration|Deranged Bright Followers Restored))?\.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/83576/'
-      name: 'Vigor - A Vanilla JSawyer Fork'
+      - link: 'https://www.nexusmods.com/newvegas/mods/83576/'
+        name: 'Vigor - A Vanilla JSawyer Fork'
   - name: 'Vigor.esp'
     after: [ 'DelayDLCRedux.esp' ]
     inc:
-    - 'DelayDLCReduxPOPP.esp'
-    - 'jsawyer.esp'
-    - 'JSawyer - CE.esp'
-    - 'JSawyer Ultimate.esp'
-    - 'sawyerbatty.esp'
+      - 'DelayDLCReduxPOPP.esp'
+      - 'jsawyer.esp'
+      - 'JSawyer - CE.esp'
+      - 'JSawyer Ultimate.esp'
+      - 'sawyerbatty.esp'
     tag:
       - Actors.Stats
       - Delev
