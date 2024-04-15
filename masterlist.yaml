@@ -3705,6 +3705,18 @@ plugins:
       - crc: 0x17CC697A
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'MercWanderer.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/47855/'
+        name: 'Mercenary Wanderer'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0xA144C450
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'MCMetalArmor.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79493/'
