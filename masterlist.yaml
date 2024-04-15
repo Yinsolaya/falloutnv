@@ -3630,6 +3630,34 @@ plugins:
       - crc: 0xAED9FB40
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Fallout The Odyssey Mega Armor Pack.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/79313/' ]
+    req:
+      - <<: *JIPLN
+        condition: 'file("config/Odyssey Armors Config.ini")'
+      - <<: *johnnyGuitar
+        condition: 'file("config/Odyssey Armors Config.ini")'
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Titans of The New West 2.0](https://www.nexusmods.com/newvegas/mods/78688/)' ]
+        condition: 'not active("Titans of The New West.esp") and not file("STAR TTW 2.esp")'
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *requires_xNVSE
+        condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("config/Odyssey Armors Config.ini")'
+    tag:
+      - name: 'Invent.Add'
+        condition: 'file("config/Odyssey Armors Config.ini")'
+      - name: 'Invent.Remove'
+        condition: 'file("config/Odyssey Armors Config.ini")'
+    clean:
+      - crc: 0x78B37214
+        util: 'FNVEdit v4.1.5d'
+      # LL Integrated
+      - crc: 0x63B321E5
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'GP-5 Gasmask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72282/' ]
     msg:
