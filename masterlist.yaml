@@ -1439,6 +1439,19 @@ plugins:
       - crc: 0x89BC24A8
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Veronica Outfit Replacer.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/71823/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0xA0F3223D
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x6C7D7344
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'WMIMNV.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/65052/'
