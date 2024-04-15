@@ -3387,6 +3387,35 @@ plugins:
   - name: 'Moddable Anti-Materiel Rifle.esp'
     msg: [ *obsolete ]
 
+  - name: 'MMM-CCARC-TTW.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78343/'
+        name: 'Classic Combat Armor Replacer Combined (TTW)'
+    after:
+      - '1nivVSLArmors.esp'
+      - 'Classic Combat Armor Replacer Redux TTW.esp'
+      - 'Enclave and BoS Classic Combat Armor .esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *requiresResources
+        subs: [ '[Brotherhood of Steel and Enclave Classic Combat Armors](https://www.nexusmods.com/newvegas/mods/78216/)' ]
+        condition: 'not file("meshes/armor/BoS Combat Armor/combatHelmet_MK1.nif") or not file("STAR TTW 2.esp")'
+      - <<: *requiresResources
+        subs: [ '[Classic Replacers for TTW](https://www.nexusmods.com/newvegas/mods/77858/)' ]
+        condition: 'not file("meshes/armor/Mk2/combatArmor_MK1.nif")'
+    tag:
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Sound
+      - Stats
+
   - name: 'NCR Rearmament v1.5( \(Lore\))?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40139/' ]
     msg:
