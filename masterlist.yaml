@@ -1340,7 +1340,7 @@ plugins:
         condition: 'file("STAR TTW 2.esp")'
       - <<: *requiresResources
         subs: [ '[aMidianBorn NV Book Of Water](https://www.nexusmods.com/newvegas/mods/39873/)' ]
-        condition: 'not file("meshes\armor\advancedpowerarmor\adpowerarmor.nif")'
+        condition: 'not file("meshes/armor/advancedpowerarmor/adpowerarmor.nif")'
 
   - name: 'Classic Combat Armor Replacer Redux FNV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/77658/' ]
@@ -3362,7 +3362,7 @@ plugins:
     msg:
       - <<: *requiresResources
         subs: [ 'Fallout 3' ]
-        condition: 'not file("sound\fx\wpn\rifleassault\wpn_rifleassault_fire_lp.wav")'
+        condition: 'not file("sound/fx/wpn/rifleassault/wpn_rifleassault_fire_lp.wav")'
     tag: [ Sound ]
 
   - name: 'Ghost Variants( Safe| Adjutant)?\.esp'
