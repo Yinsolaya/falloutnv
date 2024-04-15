@@ -3663,6 +3663,18 @@ plugins:
       - crc: 0x636CF197
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'NCR Commando.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/75821/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4E777EA0
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
   - name: 'Nightstalker Outfit.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66399/'
