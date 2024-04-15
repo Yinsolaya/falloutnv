@@ -1343,7 +1343,7 @@ plugins:
         condition: 'not file("meshes\armor\advancedpowerarmor\adpowerarmor.nif")'
 
   - name: 'Classic Combat Armor Replacer Redux FNV.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/77658/' ]
     msg:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
