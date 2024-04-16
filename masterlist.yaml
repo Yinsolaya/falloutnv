@@ -3723,6 +3723,25 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
+  - name: 'Geonox_Riot_Armor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38887/'
+        name: 'Geonox Riot Armor'
+      - link: 'https://www.nexusmods.com/newvegas/mods/43844/'
+        name: 'Geonox Riot Armor - Female Version'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *requiresResources
+        subs: [ '[Geonox Riot Armor](https://www.nexusmods.com/newvegas/mods/38887/)' ]
+        condition: 'not file("textures/armor/Geonox_FNV/Geonoxriotarmor/jil01.dds")'
+    clean:
+      - crc: 0xA7EB41CF
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x40F8F7CC
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'GP-5 Gasmask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72282/' ]
     msg:
