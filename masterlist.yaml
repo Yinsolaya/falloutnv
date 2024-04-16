@@ -3971,6 +3971,18 @@ plugins:
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
 
+  - name: 'Road Warrior''s Armor.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/65594/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE7334719
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
   - name: 'Seeker Armor.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/43760/'
