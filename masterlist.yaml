@@ -3911,6 +3911,20 @@ plugins:
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
 
+  - name: 'Seeker Armor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/43760/'
+        name: 'Wasteland Seeker Armor'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x89A01A68
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
   - name: 'The Lone Wanderer.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77281/'
