@@ -3525,6 +3525,18 @@ plugins:
       - Relev
       - Stats
 
+  - name: 'AltynHelmet.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75714/'
+        name: 'Altyn Helmet - Retro Tactical Headgear'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0xC7DBA90B
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'Arsthetiu''s Armoire.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79001/' ]
     req: [ *JIPLN ]
