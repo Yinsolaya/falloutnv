@@ -3928,6 +3928,18 @@ plugins:
       - crc: 0x37966E9C
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Psycho Gear.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/58258/'
+        name: 'Psycho Armor and Mask'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0xDF8EA762
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'QwibNewBackpacks(TTWAddon)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71510/'
