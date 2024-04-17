@@ -7349,7 +7349,6 @@ plugins:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned II.esm'
       - 'TTW Redesigned.esm'
-      - 'Two Wastelands Redesigned.esm'
     tag:
       - Actors.ACBS
       - Actors.AIData
