@@ -3702,6 +3702,48 @@ plugins:
       - crc: 0x2963032B
         util: 'FNVEdit v4.1.5d'
 
+  - name: '(CFWNV|CFW-(DLC|DM|GRA|HH|LR|OWB))\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/37002/'
+        name: 'Classic Fallout Weapons - New Vegas'
+  - name: 'CFWNV.esm'
+    inc:
+      - 'Classic Fallout Weapons Remastered v1.2.esp'
+      - 'Classic Fallout Weapons Replacer Pack.esp'
+      - *TTWv320
+    msg:
+      - <<: *useInstead
+        subs: [ '[Classic Fallout Weapons Remastered](https://www.nexusmods.com/newvegas/mods/73805/)' ]
+        condition: 'file("DeadMoney.esm") and file("HonestHearts.esm") and file("OldWorldBlues.esm") and file("LonesomeRoad.esm") and file("GunRunnersArsenal.esm") and file("CaravanPack.esm") and file("ClassicPack.esm") and file("MercenaryPack.esm") and file("TribalPack.esm")'
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+  - name: 'CFW-DLC.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Relev
+      - WeaponMods
+  - name: 'CFW-DM.esp'
+    tag:
+      - Graphics
+      - WeaponMods
+  - name: 'CFW-GRA.esp'
+    tag:
+      - Delev
+      - Graphics
+      - WeaponMods
+  - name: 'CFW-HH.esp'
+    tag: [ Delev ]
+  - name: 'CFW-LR.esp'
+    tag:
+      - Delev
+      - Invent.Add
+  - name: 'CFW-OWB.esp'
+    tag: [ Relev ]
+
   - name: 'ClassicMetalArmorMkI.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/67315/'
@@ -6941,10 +6983,6 @@ plugins:
       - Eyes
       - Hair
       - Names
-  - name: 'CFW-DLC.esp'
-    tag:
-      - Invent
-      - Graphics
   - name: 'ammoingredientsloot.esp'
     tag: [ Invent ]
   - name: 'Alternative Repairing - Breakdown Item Icons.esp'
@@ -7615,10 +7653,6 @@ plugins:
 
   - name: 'The Storyteller.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/58473/' ]
-    inc: [ *TTWv320 ]
-
-  - name: 'CFWNV.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37002/' ]
     inc: [ *TTWv320 ]
 
   - name: 'IMPACT.esp'
