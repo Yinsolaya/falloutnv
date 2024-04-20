@@ -1555,6 +1555,46 @@ plugins:
     # Do not clean
 
 ###### AudioVisual - Sound & Music ######
+  - name: 'ATMOS (Ambient Overhaul( Intense| Subtle)?|Music System)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/85939/'
+        name: 'ATMOS Ambience Overhaul'
+  - name: 'ATMOS (Ambient Overhaul( Intense| Subtle)?)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'ATMOS Ambient Overhaul ESP' ]
+        condition: 'many("ATMOS (Ambient Overhaul( Intense| Subtle)?)\.esp")'
+    tag:
+      - C.Acoustic
+      - Sound
+  - name: 'ATMOS Ambient Overhaul.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x600DCAA8
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 52
+        udr: 2
+  - name: 'ATMOS Ambient Overhaul Intense.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4B674E43
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 52
+        udr: 2
+  - name: 'ATMOS Ambient Overhaul Subtle.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xCB43BD2D
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 52
+        udr: 2
+  - name: 'ATMOS Music System.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x486E31B7
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+
   - name: 'Improved Sound FX.*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
     tag: [ Sound ]
